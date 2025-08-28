@@ -1,0 +1,61 @@
+body {
+  background-image: url("https://t3.ftcdn.net/jpg/05/71/65/40/360_F_571654023_xLN86tzE1kaM1XRntYZMz0e3J5tqsW90.jpg");
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.app {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  max-width: 400px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#joke-container p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+#status {
+  margin: 15px 0;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  background: #fda085;
+  color: white;
+  transition: 0.3s;
+}
+
+button:hover:not(:disabled) {
+  background: #f76b1c;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}

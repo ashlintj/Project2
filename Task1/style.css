@@ -1,0 +1,126 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #111;
+  min-height: 100vh;
+  background: url("background.jpg") no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  background: rgba(37, 99, 235, 0.9);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+main {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.85);
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+form {
+  margin: 15px 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 2px solid #2563eb;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 8px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s, background 0.3s;
+}
+
+#guessBtn {
+  background: #2563eb;
+  color: white;
+}
+#guessBtn:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: scale(1.05);
+}
+#guessBtn:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+#resetBtn {
+  background: #16a34a;
+  color: white;
+}
+#resetBtn:hover {
+  background: #15803d;
+  transform: scale(1.05);
+}
+#message {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.success { color: green; animation: pop 0.5s; }
+.fail { color: red; animation: shake 0.5s; }
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  max-height: 120px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+li {
+  padding: 5px;
+  border-bottom: 1px solid #eee;
+}
+@keyframes pop {
+  from { transform: scale(0.8); }
+  to { transform: scale(1); }
+}
+@keyframes shake {
+  0% { transform: translateX(-4px); }
+  25% { transform: translateX(4px); }
+  50% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+@media (max-width: 480px) {
+  main {
+    width: 95%;
+    padding: 15px;
+  }
+  header {
+    font-size: 18px;
+  }
+}
